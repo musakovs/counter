@@ -32,13 +32,9 @@ class Counter
             }
             
             if (in_array($current, [1,2]) && $next < 7) {
-                $tmp = $this->strings(substr($string, $i + 1), array_merge($tokens, [$current]));
-                $tmp2 = $this->strings(substr($string, $i + 2), array_merge($tokens, [$current . $next]));
+                $tmp = $this->strings(substr($string, $i + 2), array_merge($tokens, [$current . $next]));
                 
                 foreach ($tmp as $str) {
-                    $strings[] = $str;
-                }
-                foreach ($tmp2 as $str) {
                     $strings[] = $str;
                 }
             }
